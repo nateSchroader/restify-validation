@@ -22,6 +22,8 @@ server.post( '/test', function( req, res, next ){
 
     req.assert( 'name', 'isString', {} );
 
+    console.log( req.validationErrors );
+
     res.send( 200, {} );
 
     return next();
