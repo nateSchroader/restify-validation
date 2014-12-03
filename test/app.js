@@ -1,3 +1,4 @@
+var _ = require( 'lodash' );
 var restify = require( 'restify' );
 var restifyValidation = require( '../index.js' );
 var server = restify.createServer( {
@@ -20,11 +21,14 @@ server.listen( 3000, function(){
 
 server.post( '/test', function( req, res, next ){
 
-    req.assert( 'name', 'isString', {} );
+    req.assert( 'name', 'isNumerical', {} );
 
-    console.log( req.validationErrors );
-
-    res.send( 200, {} );
+    if( !_.isEmpty( req.validationErrors ) ){
+        res.send( 200, req.validationErrors );
+    }
+    else{
+        res.send( 200, { valid: true } );
+    }
 
     return next();
 } );
