@@ -1,20 +1,20 @@
 {
   "name": "restify-validation",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": ""
   },
   "repository": {
     "type": "git",
     "url": "https://nateSchroader@github.com/Akirix/restify-validation.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Nate Schroader <nate@akirix.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Akirix/restify-validation/issues"
   },
